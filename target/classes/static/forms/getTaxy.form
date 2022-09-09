@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "label": "Pack Cash",
+      "type": "textfield",
+      "id": "Field_0w095hp",
+      "key": "pack",
+      "description": "How much ..",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Where are you headed",
+      "type": "textfield",
+      "id": "Field_12wuz40",
+      "key": "country",
+      "description": "Contry"
+    }
+  ],
+  "type": "default",
+  "id": "formulario11",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.1.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<Title>File Upload Tutorial</Title>
+</head>
+<body>
+	<h1>PRAGMA FBD - POC TEXTRACT</h1>
+	<h2>Analizador documentos</h2>
+	<p>Cargue el documento en formato .pdf o png que desea analizar</p>
+	<br>
+	
+	<form form name="" role="form"">
+	<br>
+	<div>
+		<input type="file"
+		       cam-variable-name="documentLoad"
+		       cam-variable-type="File"
+		       cam-max-filesize="10000000" />
+	</div>
+	<br>
+	<p>Agregue objeto json segun el ejemplo con las validaciones a realizar</p>
+	<br>
+	<textarea id="validaciones"
+          cam-variable-name="validaciones"
+          cam-variable-type="String"
+          rows="4"></textarea>
+	</form>
+</body>
+</html>

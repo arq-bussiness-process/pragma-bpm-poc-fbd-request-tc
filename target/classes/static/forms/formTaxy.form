@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "label": "Pack Cash",
+      "type": "textfield",
+      "id": "Field_0w095hp",
+      "key": "pack",
+      "description": "How much ..",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Where are you headed",
+      "type": "textfield",
+      "id": "Field_12wuz40",
+      "key": "country",
+      "description": "Contry"
+    },
+    {
+      "label": "user name",
+      "type": "textfield",
+      "id": "Field_0w2iud2",
+      "key": "username"
+    },
+    {
+      "label": "password",
+      "type": "textfield",
+      "id": "Field_12qluxh",
+      "key": "password"
+    }
+  ],
+  "type": "default",
+  "id": "formularioT",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.1.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.17.0",
+  "schemaVersion": 4
+}

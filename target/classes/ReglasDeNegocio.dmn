@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0fwfdyx" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="ReglaTablaDecision" name="Evaluación Capacidad Crediticia">
+    <decisionTable id="DecisionTable_0q3o0ad" hitPolicy="FIRST">
+      <input id="Input_1" biodi:width="150" camunda:inputVariable="ingresos">
+        <inputExpression id="InputExpression_1" typeRef="integer" expressionLanguage="feel">
+          <text>ingresos</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1rbuvbu" label="categoriaCliente" biodi:width="150" camunda:inputVariable="categoriaCliente">
+        <inputExpression id="LiteralExpression_0nlb3xs" typeRef="string" expressionLanguage="feel">
+          <text></text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1in2ow9">
+          <text>"A","B","C"</text>
+        </inputValues>
+      </input>
+      <output id="Output_1" label="Resultado_Evaluacion" name="resultadoEvaluacionMeta" typeRef="string" biodi:width="150">
+        <outputValues id="UnaryTests_1lw2ype">
+          <text>"EmitirTarjetaCredito","NotificarRechazoTarjetaCredito"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_0wslxes">
+        <inputEntry id="UnaryTests_0bulw3w">
+          <text>&gt; 5000000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06qk8h2">
+          <text>"A"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jhsquz">
+          <text>"EmitirTarjetaCredito"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1x5oavp">
+        <inputEntry id="UnaryTests_00sp433">
+          <text>&gt; 2500000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dr57ud">
+          <text>"A","B"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iyno1l">
+          <text>"EmitirTarjetaCredito"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vq4ps1">
+        <inputEntry id="UnaryTests_0ar8vog">
+          <text>&lt;= 2500000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11a4xy5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rkpgi2">
+          <text>"NotificarRechazoTarjetaCredito"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zi94xf">
+        <inputEntry id="UnaryTests_13twswy">
+          <text>&lt;= 2500000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mbcltu">
+          <text>"A","B","C"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06qfw0a">
+          <text>"NotificarRechazoTarjetaCredito"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="ReglaTablaDecision">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

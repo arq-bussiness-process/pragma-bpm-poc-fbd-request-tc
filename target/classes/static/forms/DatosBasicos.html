@@ -1,0 +1,117 @@
+<h1>Solicitud de Tarjeta de Credito en Linea</h1>
+<br>
+<br>
+<p>Para hacer la solicitud en línea de tu tarjeta de crédito Exprés, debes ser empleado o pensionado con ingreso mínimo
+	de $ 1.500.000</p>
+<br>
+
+
+<form role="form" name="variablesForm">
+	<div class="row">
+		<div class="col-xs-6">
+			<h2>Informacion Personal</h2>
+
+			<!-- Firstname -->
+			<div class="form-group">
+				<label for="inputFirstname">Primer Nombre</label>
+				<div class="controls">
+					<input id="inputFirstname" class="form-control" required type="text" cam-variable-name="firstname"
+						cam-variable-type="String" placeholder="Victor" ng-minlength="2" ng-maxlength="20" />
+				</div>
+			</div>
+
+			<!-- Lastname -->
+			<div class="form-group">
+				<label for="inputLastname">Primer Apellido</label>
+				<div class="controls">
+					<input id="inputLastname" class="form-control" required type="text" cam-variable-name="lastname"
+						cam-variable-type="String" placeholder="Camacho" ng-minlength="2" ng-maxlength="20" />
+				</div>
+			</div>
+			
+			<!-- Tipo documento -->
+			<div class="form-group">
+				<label for="documentType">Tipo Documento</label>
+				<div class="controls">
+					<!--select box -->
+					<select id="documentType" class="form-control" cam-variable-name="documentType" cam-variable-type="String"
+						ng-change="calculateLoan()">
+						<option value="CC" checked>Cedula</option>
+						<option value="PA">Pasaporte</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- DocId -->
+			<div class="form-group">
+				<label for="inputDocumentId">Numero Documento</label>
+				<div class="controls">
+					<input id="inputDocumentId" class="form-control" required type="text" cam-variable-name="documentId"
+						cam-variable-type="String" placeholder="102233145" ng-minlength="2" ng-maxlength="20" />
+				</div>
+			</div>
+
+			<!-- Email -->
+			<div class="form-group">
+				<label for="inputEmail">Email</label>
+				<div class="controls">
+					<input id="inputEmail" class="form-control" required type="text" cam-variable-name="email"
+						cam-variable-type="String" placeholder="ing.victorcamacho@gmail.com" ng-minlength="2"
+						ng-maxlength="40" />
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-xs-6">
+			<h2>Informacion Socioeconomica</h2>
+
+			<!-- Gender -->
+			<div class="form-group">
+				<label for="produtType">Tipo Producto Solicitado</label>
+				<div class="controls">
+					<!--select box -->
+					<select id="produtType" class="form-control" cam-variable-name="produtType" cam-variable-type="String"
+						ng-change="calculateLoan()">
+						<option value="Credito" checked>Credito</option>
+						<option value="Tarjeta">Tarjeta</option>
+					</select>
+
+				</div>
+			</div>
+			
+			<!-- Actividad economica -->
+			<div class="form-group">
+				<label for="activityType">Actividad Economica</label>
+				<div class="controls">
+					<!--select box -->
+					<select id="activityType" class="form-control" cam-variable-name="activityType" cam-variable-type="String"
+						ng-change="calculateLoan()">
+						<option value="Empleado" checked>Empleado</option>
+						<option value="Independiente">Independiente</option>
+						<option value="Pensionado">Pensionado</option>
+					</select>
+
+				</div>
+			</div>
+
+			<!-- Ingresos -->
+			<div class="form-group">
+				<label for="inputIngresos">Ingresos Mensuales</label>
+				<div class="controls">
+					<input id="inputIngresos" class="form-control" required type="text" cam-variable-name="ingresos"
+						cam-variable-type="String" placeholder="2000000" ng-minlength="2" ng-maxlength="20" />
+				</div>
+			</div>
+			
+			<!-- Egresos -->
+			<div class="form-group">
+				<label for="inputEgresos">Egresos Mensuales</label>
+				<div class="controls">
+					<input id="inputEgresos" class="form-control" required type="text" cam-variable-name="egresos"
+						cam-variable-type="String" placeholder="200000" ng-minlength="2" ng-maxlength="20" />
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
